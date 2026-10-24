@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 — YTBadge</title>
+<style>
+  :root { color-scheme: light; }
+  body {
+    margin: 0; padding: 48px 20px 80px;
+    font-family: "Malgun Gothic", "맑은 고딕", -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.8; color: #1b1f27; background: #fbfbfd;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 27px; margin: 0 0 4px; }
+  .sub { color: #6b7280; margin: 0 0 36px; font-size: 14px; }
+  h2 { font-size: 18px; margin: 34px 0 8px; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; }
+  code { background: #f1f3f6; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+  .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 18px 22px; margin: 18px 0; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 14px; }
+  a { color: #2563eb; }
+  table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 15px; }
+  th, td { border-bottom: 1px solid #e5e7eb; padding: 9px 10px 9px 0; text-align: left; vertical-align: top; }
+  th { color: #6b7280; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <h1>개인정보처리방침</h1>
+  <p class="sub">YTBadge · 최종 수정일 2026년 10월 24일</p>
+
+  <p>
+    YTBadge(이하 "본 앱")는 사용자의 컴퓨터에서 실행되는 윈도우 데스크톱
+    프로그램입니다. 본 방침은 본 앱이 어떤 정보를 다루고, 어디에 저장하며,
+    누구에게 전송하는지를 설명합니다.
+  </p>
+
+  <h2>1. 핵심 요약</h2>
+  <div class="card">
+    본 앱은 사용자의 데이터를 개발자에게 전송하지 않습니다. 개발자가 운영하는
+    서버는 없습니다. 모든 데이터는 사용자 본인의 컴퓨터와, 사용자 본인의 구글·
+    유튜브 계정 사이에서만 오갑니다.
+  </div>
+
+  <h2>2. 접근하는 정보</h2>
+  <p>
+    사용자가 구글 로그인으로 권한을 허용하면, 본 앱은 YouTube Data API v3를 통해
+    사용자 본인의 채널에 대해 다음을 수행합니다.
+  </p>
+  <table>
+    <tr><th>항목</th><th>용도</th></tr>
+    <tr><td>채널 정보, 영상 목록</td><td>처리할 영상을 파악</td></tr>
+    <tr><td>영상별 조회수, 길이</td><td>어떤 뱃지를 붙일지 판정</td></tr>
+    <tr><td>영상 썸네일 이미지</td><td>원본 보관 및 합성</td></tr>
+    <tr><td>썸네일 변경</td><td>합성한 이미지를 업로드</td></tr>
+  </table>
+  <p>
+    사용 범위(scope)는 <code>https://www.googleapis.com/auth/youtube</code> 하나입니다.
+    시청 기록, 구독자 개인정보, 댓글, 수익 정보에는 접근하지 않습니다.
+  </p>
+
+  <h2>3. 저장 위치</h2>
+  <ul>
+    <li>설정·영상 목록·실행 기록: <code>%APPDATA%\YTBadge\ytbadge.db</code></li>
+    <li>원본 썸네일 사본: <code>%APPDATA%\YTBadge\originals\</code></li>
+    <li>사용자가 지정한 뱃지 이미지 사본: <code>%APPDATA%\YTBadge\badges\</code></li>
+    <li>실행 로그(7일 보관): <code>%APPDATA%\YTBadge\logs\</code></li>
+  </ul>
+  <p>전부 사용자 컴퓨터 안에만 있으며, 외부로 전송되지 않습니다.</p>
+
+  <h2>4. 로그인 토큰</h2>
+  <p>
+    구글 로그인으로 발급된 토큰은 윈도우 자격 증명 관리자(Windows Credential
+    Manager)에 저장됩니다. 평문 파일로 저장하지 않으며, 개발자는 이 토큰을 볼 수
+    없습니다. 프로그램에서 연결을 해제하거나 자격 증명 관리자에서 항목을 삭제하면
+    즉시 제거됩니다.
+  </p>
+  <p>
+    구글 계정 권한은 사용자가 직접 철회할 수 있습니다:
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+      myaccount.google.com/permissions</a>
+  </p>
+
+  <h2>5. 제3자 제공</h2>
+  <p>
+    본 앱은 사용자 데이터를 제3자에게 판매·대여·공유하지 않습니다. 광고 모듈,
+    분석 도구, 사용 통계 수집 기능을 포함하지 않습니다.
+  </p>
+  <p>
+    네트워크 통신은 다음 두 곳으로만 발생합니다.
+  </p>
+  <ul>
+    <li>구글 / 유튜브 API 서버 — 위 2항의 작업 수행</li>
+    <li><code>i.ytimg.com</code> — 공개된 썸네일 이미지 내려받기</li>
+  </ul>
+
+  <h2>6. 데이터 삭제</h2>
+  <p>
+    <code>%APPDATA%\YTBadge\</code> 폴더를 삭제하면 본 앱이 저장한 모든 데이터가
+    사라집니다. 프로그램을 제거하려면 설치 폴더를 삭제하고, 자동 실행을 켜 두었다면
+    윈도우 작업 스케줄러에서 <code>YTBadge\Sync</code> 작업을 삭제하면 됩니다.
+  </p>
+
+  <h2>7. 구글 API 서비스 사용자 데이터 정책</h2>
+  <p>
+    본 앱의 구글 API 사용은
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">
+      Google API Services User Data Policy</a>를 따르며, 여기에는 제한된 사용 요건
+    (Limited Use requirements)이 포함됩니다.
+  </p>
+
+  <h2>8. 변경</h2>
+  <p>
+    본 방침이 변경되면 이 페이지에 수정일과 함께 게시합니다.
+  </p>
+
+  <footer>
+    <p>
+      문의: <a href="mailto:parkmin5671@gmail.com">parkmin5671@gmail.com</a><br>
+      <a href="index.html">YTBadge 홈</a>
+    </p>
+  </footer>
+</main>
+</body>
+</html>
